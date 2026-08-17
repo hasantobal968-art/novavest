@@ -41,3 +41,56 @@
     transform: translateY(0);
   }
 }
+/* NovaVest Premium Effects */
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(242,182,50,.08), transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(80,120,255,.06), transparent 30%);
+}
+
+.brand .logo {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.brand:hover .logo {
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 0 25px rgba(242,182,50,.35);
+}
+
+.metric {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-7px) scale(1.015);
+  box-shadow: 0 15px 35px rgba(0,0,0,.14);
+}
+
+.row {
+  transition: background .25s ease, transform .25s ease;
+}
+
+.row:hover {
+  transform: translateX(-5px);
+  background: rgba(242,182,50,.06);
+}
+
+.btn,
+button {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes novaGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(242,182,50,0); }
+  50% { box-shadow: 0 0 25px rgba(242,182,50,.18); }
+}
+
+.welcome {
+  animation: novaGlow 3s ease-in-out infinite;
+}

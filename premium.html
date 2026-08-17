@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>NovaVest Premium</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .premium-page {
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(242,182,50,.12), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(80,120,255,.08), transparent 35%);
+    }
+
+    .premium-box {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    .premium-title {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .premium-subtitle {
+      opacity: .75;
+      margin-bottom: 35px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .plan {
+      padding: 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+      transition: .3s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.18);
+    }
+
+    .plan h2 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .price small {
+      font-size: 14px;
+      opacity: .7;
+    }
+
+    .features {
+      text-align: right;
+      line-height: 2;
+      margin: 25px 0;
+    }
+
+    .subscribe {
+      width: 100%;
+      padding: 14px;
+      border: 0;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+      background: #f2b632;
+      color: #111;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 13px;
+      opacity: .65;
+    }
+
+    @media (max-width: 650px) {
+      .plans {
+        grid-template-columns: 1fr;
+      }
+
+      .premium-title {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="premium-page">
+
+    <div class="premium-box">
+
+      <h1 class="premium-title">⭐ NovaVest Premium</h1>
+
+      <p class="premium-subtitle">
+        أدوات ومزايا إضافية للمستخدمين المشتركين.
+      </p>
+
+      <div class="plans">
+
+        <section class="plan">
+          <h2>Premium</h2>
+
+          <div class="price">
+            $5 <small>/ شهريًا</small>
+          </div>
+
+          <div class="features">
+            <div>✓ لوحة تحكم متقدمة</div>
+            <div>✓ أدوات تحليل إضافية</div>
+            <div>✓ تنبيهات مخصصة</div>
+            <div>✓ دعم للمشتركين</div>
+          </div>
+
+          <button class="subscribe"
+                  onclick="choosePlan('Premium', 5)">
+            اشترك الآن
+          </button>
+        </section>
+
+        <section class="plan">
+          <h2>Pro</h2>
+
+          <div class="price">
+            $10 <small>/ شهريًا</small>
+          </div>
+
+          <div class="features">
+            <div>✓ جميع مزايا Premium</div>
+            <div>✓ أدوات تحليل متقدمة</div>
+            <div>✓ تنبيهات أكثر</div>
+            <div>✓ مزايا Pro إضافية</div>
+          </div>
+
+          <button class="subscribe"
+                  onclick="choosePlan('Pro', 10)">
+            اشترك الآن
+          </button>
+        </section>
+
+      </div>
+
+      <p class="note">
+        الاشتراك مقابل خدمات رقمية. لا يمثل هذا الاشتراك استثمارًا
+        ولا يضمن أي أرباح مالية.
+      </p>
+
+    </div>
+
+  </main>
+
+  <script>
+    function choosePlan(plan, price) {
+      alert(
